@@ -13,5 +13,8 @@ namespace FinalProject.Models
         public int AvaliableGpa { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public int DepartmentId { get; set; }
+
+        public Department Department { get; set; }
     }
 }

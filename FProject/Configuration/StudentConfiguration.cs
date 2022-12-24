@@ -31,15 +31,11 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
             .WithOne(x => x.Student)
             .HasForeignKey(x => x.StudentId)
             .HasConstraintName("FK_StudentSubject_Student");
-        builder.HasMany(x => x.Department)
-           .WithOne(x => x.Schedule)
-           .HasForeignKey(x => x.ScheduleId)
-           .HasConstraintName("FK_Department_Schedule");
-        builder.HasMany(x => x.StudentSubjects)
-            .WithOne(x => x.Student)
-            .HasForeignKey(x => x.StudentId)
-            .HasConstraintName("FK_StudentSubject_Student");
-        builder.Has
+       // builder.HasMany(x => x.Department)
+       //   .WithOne(x => x.Schedule)
+       //   .HasForeignKey(x => x.ScheduleId)
+       //   .HasConstraintName("FK_Department_Schedule");
+       
 
     }
 }

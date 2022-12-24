@@ -1,5 +1,6 @@
 ﻿
 using System.Linq.Expressions;
+using FinalProject;
 using Microsoft.EntityFrameworkCore;
 
 namespace FProject.Repositories;

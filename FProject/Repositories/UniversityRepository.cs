@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using FinalProject;
 using Microsoft.EntityFrameworkCore;
 //using FProject.Models;
 
@@ -15,7 +16,7 @@ public class UniversityRepository : IUniversityRepository
 
     public async Task<University> GetByIdAsync(int id)
     {
-        return await _dbContext.Restaurants.Where(x => x.Id == id).FirstOrDefaultAsync();
+        return await _dbContext.Student.Where(x => x.Id == id).FirstOrDefaultAsync();
     }
 
     public async Task<List<University>> GetAllAsync()

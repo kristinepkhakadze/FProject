@@ -14,8 +14,12 @@ namespace FinalProject.Configuration
         public void Configure(EntityTypeBuilder<Teacher> builder)
         {
             builder.ToTable("Teacher", "teacher");
-            builder.Property(x => x.FirstName).HasMaxLength(50);
-            builder.Property(x => x.LastName).HasMaxLength(50);
+            builder.Property(x => x.FirstName)
+                .HasMaxLength(50);
+            builder.Property(x => x.LastName)
+                .HasMaxLength(50);
+            builder.Property(x => x.PersonalId)
+               .HasMaxLength(20);
         }
     }
 }

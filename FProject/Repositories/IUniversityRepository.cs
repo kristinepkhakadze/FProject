@@ -5,12 +5,12 @@ namespace FProject.Repositories
 {
     public interface IUniversityRepository
     {
-        Task<University> GetByIdAsync(int id);
-        Task<List<University>> GetAllAsync();
-        void Update(University university);
-        Task AddAsync(University university);
+        Task<Student> GetByIdAsync(int id);
+        Task<List<Student>> GetAllAsync();
+        void Update(Student university);
+        Task AddAsync(Student university);
 
-        Task<List<University>> GetWithFilterAsync(Expression<Func<Student, bool>> expression = null);
+        Task<List<Student>> GetWithFilterAsync(Expression<Func<Student, bool>> expression = null);
         Task SaveAsync();
     }
 }

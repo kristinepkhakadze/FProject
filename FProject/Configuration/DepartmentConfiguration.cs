@@ -20,6 +20,8 @@ namespace FinalProject.Configuration
                 .HasMaxLength(255);
             builder.Property(x => x.MaxNumofStudent)
                 .HasMaxLength(10);
+          
+
 
         }
     }

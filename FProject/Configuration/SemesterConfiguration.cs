@@ -14,10 +14,14 @@ namespace FinalProject.Configuration
         public void Configure(EntityTypeBuilder<Semester> builder)
         {
             builder.ToTable("Semester", "semester");
-            builder.Property(x => x.Name).HasMaxLength(50);
-            builder.Property(x => x.AvaliableGpa).HasMaxLength(30);
-            builder.Property(x => x.StartDate).HasMaxLength(30);
-            builder.Property(x => x.EndDate).HasMaxLength(30);
+            builder.Property(x => x.Name)
+                .HasMaxLength(50);
+            builder.Property(x => x.AvaliableGpa)
+                .HasMaxLength(30);
+            builder.Property(x => x.StartDate)
+                .HasMaxLength(30);
+            builder.Property(x => x.EndDate)
+                .HasMaxLength(30);
         }
     }
 }
