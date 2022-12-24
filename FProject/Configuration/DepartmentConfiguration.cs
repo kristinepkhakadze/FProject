@@ -21,8 +21,15 @@ namespace FinalProject.Configuration
             builder.Property(x => x.MaxNumofStudent)
                 .HasMaxLength(10);
           
-
-
+            builder.HasMany(x => x.Student)
+                .WithOne(x => x.Department)
+                .HasForeignKey(x => x.DepartmentId);
+                .HasConstraintName("Fk_Student_Demartment")
+               // .IsRequired();
+            builder.HasMany(x => x.Teacher)
+                .WithOne(x => x.Department)
+                .HasForeignKey(x => x.DepartmentId);
+                .HasConstraintName("Fk_Teacher_Demartment")
         }
     }
 }

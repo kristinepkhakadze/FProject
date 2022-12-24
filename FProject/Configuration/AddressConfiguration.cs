@@ -21,6 +21,12 @@ namespace FinalProject.Configuration
                 .HasMaxLength(255);
             builder.Property(x => x.Address2)
                 .HasMaxLength(50);
+            builder.HasOne(x => x.Student)
+                .WithOne(x => x.Address)
+                .HasForeignKey<Address>(x => x.StudentId);
+            builder.HasOne(x => x.Teacher)
+                .WithOne(x => x.Address)
+                .HasForeignKey<Address>(x => x.TeacherId);
         }
     }
 }

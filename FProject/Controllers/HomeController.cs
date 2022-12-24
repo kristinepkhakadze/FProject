@@ -2,9 +2,7 @@
 
 namespace FProject.Controllers
 {
-    [ApiController]
-    [Route("University")]
-    public class UniversityController : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {

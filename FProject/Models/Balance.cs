@@ -13,7 +13,6 @@ namespace FinalProject.Models
         public int Amount { get; set; }
 
         public int SemesterId { get; set; }
-        [ForeignKey("Semester")]
         public Semester Semester { get; set; }
         public int StudentId { get; set; }
         public  Student Student { get; set; }

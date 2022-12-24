@@ -20,10 +20,8 @@ namespace FinalProject.Configuration
             builder.Property(x => x.Debth)
                 .HasColumnType("decimal(18,2");
 
-            builder.HasOne(x => x.Student)
-            .WithOne(x => x.Balance)
-            .HasForeignKey(x => x.BalanceId)
-            .HasConstraintName("FK_Student_Balance");
+            builder.Property(x => x.SemesterId);
+            builder.Property(x => x.StudentId);
         }
     }
 }
